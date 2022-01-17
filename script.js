@@ -37,7 +37,7 @@ function displayChords(key){
         let chordPicture = document.createElement('img');
         let chordLabel = document.createElement('span');
         chordLabel.innerHTML = handleUnderscore(element);
-        chordPicture.src = `Chord_Images/${element}.png`;
+        chordPicture.src = `ChordImages/${element}.png`;
         chordPicture.setAttribute('class', 'chord');
         chordDiv.appendChild(chordPicture);
         chordDiv.appendChild(chordLabel);
@@ -45,7 +45,12 @@ function displayChords(key){
         newDiv.appendChild(chordDiv);
     });
 
-    function handleUnderscore(text){
+    
+
+    document.body.appendChild(newDiv);
+}
+
+function handleUnderscore(text){
         if(!text.includes('_')){
             return text;
         }
@@ -55,6 +60,3 @@ function displayChords(key){
         return text.replace('_Flat', 'b');
 
     }
-
-    document.body.appendChild(newDiv);
-}
