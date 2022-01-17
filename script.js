@@ -37,7 +37,7 @@ function displayChords(key){
         let chordPicture = document.createElement('img');
         let chordLabel = document.createElement('span');
         chordLabel.innerHTML = handleUnderscore(element);
-        chordPicture.src = `Chord_images/${element}.png`;
+        chordPicture.src = `Chord_Images/${element}.png`;
         chordPicture.setAttribute('class', 'chord');
         chordDiv.appendChild(chordPicture);
         chordDiv.appendChild(chordLabel);
